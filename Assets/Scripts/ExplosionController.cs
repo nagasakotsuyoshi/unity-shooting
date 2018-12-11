@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionControl : MonoBehaviour {
+public class ExplosionController : MonoBehaviour {
 // 爆発し終わったクローンを消す
 void Start() {
         var exp = GetComponent<ParticleSystem>();
