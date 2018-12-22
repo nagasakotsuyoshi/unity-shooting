@@ -15,8 +15,8 @@ public class UIController : MonoBehaviour {
     this.gameOverText.GetComponent<Text>().text = "GameOver";
   }
   
-  public void AddScore() {
-    this.score += 10;
+  public void AddScore(int num) {
+    this.score += num;
   }
 
   void Start() {
