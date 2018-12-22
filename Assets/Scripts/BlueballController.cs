@@ -2,26 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockController : MonoBehaviour {
+public class BlueballController : MonoBehaviour {
   float fallSpeed;
   float rotSpeed;
 
   void Start() {
     this.fallSpeed = 0.01f + 0.1f * Random.value;
     this.rotSpeed = 5f + 3f * Random.value;
-
   }
   
   void Update() {
     transform.Translate(0, -fallSpeed, 0, Space.World);
     transform.Rotate(0, 0, rotSpeed);
 
-    if (transform.position.y < -5.5f)　{
-      GameObject.Find("Canvas").GetComponent<UIController>().AddLife(-1);
+    if (transform.position.y < -5.5f) {
       Destroy(gameObject);
-      if (GameObject.Find("Canvas").GetComponent<UIController>().life == 0) {
-        GameObject.Find("Canvas").GetComponent<UIController>().GameOver();
-      }
     }
   }
 }

@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RockGenerator : MonoBehaviour
-{
+public class RockGenerator : MonoBehaviour {
 
   public GameObject rockPrefab;
 
