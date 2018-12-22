@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
   int score = 0;
-  GameObject scoreText;
+  int life = 1;
+  GameObject scoreObj;
+  GameObject lifeObj;
   GameObject gameOverText;
 
   public void GameOver(){
@@ -18,11 +20,13 @@ public class UIController : MonoBehaviour {
   }
 
   void Start() {
-    this.scoreText = GameObject.Find("Score");
+    this.scoreObj = GameObject.Find("Score");
+    this.lifeObj = GameObject.Find("Life");
     this.gameOverText = GameObject.Find ("GameOver");
   }
 
   void Update() {
-    scoreText.GetComponent<Text>().text = "Score:" + score.ToString("D4");
+    scoreObj.GetComponent<Text>().text = "Score:" + score.ToString("D4");
+    lifeObj.GetComponent<Text>().text = "Life:" + life.ToString("D4");
   }
 }
