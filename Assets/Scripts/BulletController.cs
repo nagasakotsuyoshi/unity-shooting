@@ -15,7 +15,7 @@ public class BulletController : MonoBehaviour {
   }
 
   void OnTriggerEnter2D(Collider2D coll) {
-    if (coll.gameObject.name.Contains("bulletPrefab")) {
+    if (coll.gameObject.name.Contains("bulletPrefab") || coll.gameObject.name.Contains("rocket")) {
       return;
     }
 

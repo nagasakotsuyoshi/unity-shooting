@@ -500,6 +500,8 @@ GameObject:
   - component: {fileID: 954277904}
   - component: {fileID: 954277903}
   - component: {fileID: 954277905}
+  - component: {fileID: 954277906}
+  - component: {fileID: 954277907}
   m_Layer: 0
   m_Name: rocket
   m_TagString: Untagged
@@ -579,6 +581,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1047735510248766, guid: 6347125fbcfa842a79e3ba78fd341295,
     type: 2}
+  explosionPrefab: {fileID: 100000, guid: 4c5a17ca1f9fec84e941441ebb8be079, type: 2}
+--- !u!58 &954277906
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954277902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.665
+--- !u!50 &954277907
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954277902}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1465461310
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,3 +883,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892883c121cb747c1aeccca9373cb407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  life: 1

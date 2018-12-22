@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4010516741769524}
   - component: {fileID: 212243080395235762}
-  - component: {fileID: 114626797596116888}
   - component: {fileID: 58226485322366488}
+  - component: {fileID: 114626797596116888}
   m_Layer: 0
   m_Name: RockPrefab
   m_TagString: Untagged
@@ -51,7 +51,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
