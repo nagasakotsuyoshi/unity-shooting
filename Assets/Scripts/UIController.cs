@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour {
 
-  int score = 0;
-  int life = 1;
+  public int score = 0;
+  public int life = 1;
   GameObject scoreObj;
   GameObject lifeObj;
   GameObject gameOverText;
@@ -16,7 +16,17 @@ public class UIController : MonoBehaviour {
   }
   
   public void AddScore(int num) {
-    this.score += num;
+    if (this.score + num < 0)
+      this.score = 0;
+    else
+      this.score += num;
+  }
+
+  public void AddLife(int num) {
+    if (this.life + num < 0)
+      this.life = 0;
+    else
+      this.life += num;
   }
 
   void Start() {
