@@ -18,7 +18,7 @@ public class BulletController : MonoBehaviour {
     if (coll.gameObject.name.Contains("bulletPrefab")) {
       return;
     }
-    
+
     if (coll.gameObject.name.Contains("RockPrefab")) {
       GameObject.Find("Canvas").GetComponent<UIController>().AddScore(10);
     } else if (coll.gameObject.name.Contains("RedballPrefab")) {
@@ -30,6 +30,6 @@ public class BulletController : MonoBehaviour {
     Instantiate(explosionPrefab, transform.position, Quaternion.identity);
     // 衝突したオブジェクトを削除する
     Destroy(coll.gameObject);
-      Destroy(gameObject);
+    Destroy(gameObject);
   }
 }
